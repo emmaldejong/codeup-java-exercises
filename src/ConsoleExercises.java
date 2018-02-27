@@ -4,10 +4,9 @@ public class ConsoleExercises {
     public static void main(String[] args) {
 
 //  ######## SIMPLE INPUT #############
-//        String input;
 //        Scanner reader = new Scanner(System.in);
 //        System.out.print("Please enter an integer: ");
-//        input = reader.nextLine();
+//        int input = reader.nextInt();
 //        System.out.println("You entered: --> \"" + input + "\" <--");
 
 
@@ -15,11 +14,14 @@ public class ConsoleExercises {
 //        String firstWord;
 //        String secondWord;
 //        String thirdWord;
+//
 //        Scanner reader = new Scanner(System.in);
 //        System.out.print("Please enter three words: ");
-//        firstWord = reader.nextLine();
-//        secondWord = reader.nextLine();
-//        thirdWord = reader.nextLine();
+//
+//        firstWord = reader.next();
+//        secondWord = reader.next();
+//        thirdWord = reader.next();
+//
 //        System.out.println(firstWord);
 //        System.out.println(secondWord);
 //        System.out.println(thirdWord);
