@@ -44,9 +44,13 @@ public class ConsoleExercises {
         String lengthInput = reader.nextLine();
         double length = Double.parseDouble(lengthInput);
 
+        System.out.println("Enter the height of the Codeup Classroom: ");
+        String heightInput = reader.nextLine();
+        double height = Double.parseDouble(heightInput);
+
         System.out.println("area = " + (width * length));
         System.out.println("perimeter = " + ((2 * width) + (2 * length)));
-
+        System.out.println("volume = " + (width * length * height));
 
     }
 }
