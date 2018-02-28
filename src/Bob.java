@@ -5,7 +5,6 @@ public class Bob {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Say something to Bob...");
         String input = scanner.nextLine();
-//        do {
             if (input.endsWith("?")) {
                 System.out.println("Sure");
             } else if (input.trim().equals("")) {
@@ -15,8 +14,5 @@ public class Bob {
             } else {
                 System.out.println("Whatever.");
             }
-
-//        } while (input.equals("x");
-
     }
 }
