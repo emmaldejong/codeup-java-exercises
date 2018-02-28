@@ -42,34 +42,61 @@ public class ControlFlowExercises {
 //        }
 
 //############# TABLE OF POWERS ################
+//        Scanner scanner = new Scanner(System.in);
+//        boolean confirmCont = true;
+//
+//            do {
+//                System.out.print("Please enter a number: ");
+//                int input = scanner.nextInt();
+//
+//                System.out.println("number | squared | cubed");
+//                System.out.println("---- | ---- | ----");
+//
+//                for (int i = 1; i <= input; i += 1) {
+//                    String output = "";
+//                    output += String.format("%-7d", i);
+//                    output += String.format("|%-9d", i * i);
+//                    output += String.format("|%d", i * i * i);
+//                    System.out.println(output);
+//                }
+//
+//                System.out.print("Continue? [y/n]");
+//                String userChoice = scanner.next();
+//                if (userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes")) {
+//                    confirmCont = true;
+//                } else {
+//                    confirmCont = false;
+//                }
+//
+//            } while (confirmCont);
+
+//################## GRADE CONVERTER ###################
         Scanner scanner = new Scanner(System.in);
-        boolean confirmCont = true;
+            String input;
 
             do {
-                System.out.print("Please enter a number: ");
-                int input = scanner.nextInt();
 
-                System.out.println("\nnumber | squared | cubed");
-                System.out.println("---- | ---- | ----");
+                System.out.print("Enter numeric grade: ");
+                int grade = scanner.nextInt();
+                char letterGrade = ' ';
 
-                for (int i = 1; i <= input; i += 1) {
-                    String output = "";
-                    output += String.format("%-7d", i);
-                    output += String.format("|%-9d", i * i);
-                    output += String.format("|%d", i * i * i);
-                    System.out.println(output);
+                if (grade >= 88) {
+                    letterGrade = 'A';
+                } else if (grade >= 80) {
+                    letterGrade = 'B';
+                } else if (grade >= 67) {
+                    letterGrade = 'C';
+                } else if (grade >= 60) {
+                    letterGrade = 'D';
+                } else if (grade >= 0) {
+                    letterGrade = 'F';
                 }
 
-                System.out.print("\nDo you wish to continue? [y/n]");
-                String userChoice = scanner.next();
-                if (userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes")) {
-                    confirmCont = true;
-                } else {
-                    confirmCont = false;
-                }
+                System.out.println(letterGrade);
 
-            } while (confirmCont);
+                System.out.println("Continue? [y/n] ");
+                input = scanner.next();
 
-
+            } while(input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes"));
     }
 }
