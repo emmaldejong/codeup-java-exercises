@@ -50,7 +50,7 @@ public class ControlFlowExercises {
 //                int input = scanner.nextInt();
 //
 //                System.out.println("number | squared | cubed");
-//                System.out.println("---- | ---- | ----");
+//                System.out.println("------ | --------| ------");
 //
 //                for (int i = 1; i <= input; i += 1) {
 //                    String output = "";
@@ -71,32 +71,107 @@ public class ControlFlowExercises {
 //            } while (confirmCont);
 
 //################## GRADE CONVERTER ###################
+//        Scanner scanner = new Scanner(System.in);
+//            String input;
+//
+//            do {
+//
+//                System.out.print("Enter numeric grade: ");
+//                int grade = scanner.nextInt();
+//                char letterGrade = ' ';
+//
+//                if (grade >= 88) {
+//                    letterGrade = 'A';
+//                } else if (grade >= 80) {
+//                    letterGrade = 'B';
+//                } else if (grade >= 67) {
+//                    letterGrade = 'C';
+//                } else if (grade >= 60) {
+//                    letterGrade = 'D';
+//                } else if (grade >= 0) {
+//                    letterGrade = 'F';
+//                }
+//
+//                System.out.println(letterGrade);
+//
+//                System.out.println("Continue? [y/n] ");
+//                input = scanner.next();
+//
+//            } while(input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes"));
+
+//################ Bonuses #########################
+// 1. Prompt the user to enter an integer between 1 and 7
+// and output the day of the week it maps to (Sunday is 1 and Saturday is 7)
+//        Scanner scanner = new Scanner(System.in);
+//        String input;
+//        do {
+//            System.out.println("Please enter any number between 1 and 7: ");
+//            int numberInput = scanner.nextInt();
+//            String dayOfWeek = " ";
+//            switch (numberInput) {
+//                case 1:
+//                    System.out.println("Monday");
+//                    break;
+//                case 2:
+//                    System.out.println("Tuesday");
+//                    break;
+//                case 3:
+//                    System.out.println("Wednesday");
+//                    break;
+//                case 4:
+//                    System.out.println("Thursday");
+//                    break;
+//                case 5:
+//                    System.out.println("Friday");
+//                    break;
+//                case 6:
+//                    System.out.println("Saturday");
+//                    break;
+//                case 7:
+//                    System.out.println("Sunday");
+//                    break;
+//                default:
+//                    System.out.println("Default case");
+//                    break;
+//            }
+//            System.out.println("Continue? [y/n] ");
+//                input = scanner.next();
+//        } while (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes"));
+
+// 2. Prompt the user for an integer. Output whether or not the number is prime.
         Scanner scanner = new Scanner(System.in);
-            String input;
+        String input;
+        do {
+            System.out.println("Enter any integer: ");
+            int numberInput = scanner.nextInt();
 
-            do {
-
-                System.out.print("Enter numeric grade: ");
-                int grade = scanner.nextInt();
-                char letterGrade = ' ';
-
-                if (grade >= 88) {
-                    letterGrade = 'A';
-                } else if (grade >= 80) {
-                    letterGrade = 'B';
-                } else if (grade >= 67) {
-                    letterGrade = 'C';
-                } else if (grade >= 60) {
-                    letterGrade = 'D';
-                } else if (grade >= 0) {
-                    letterGrade = 'F';
+            for (int i = 2; i < numberInput; i++) {
+                if (numberInput % i == 0) {
+                    System.out.println(numberInput + "is not Prime... :O");
+                } else {
+                    System.out.println(numberInput + "is Prime! :D");
                 }
+            }
+            System.out.println("Continue? [y/n");
+            input = scanner.next();
+        } while (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes"));
 
-                System.out.println(letterGrade);
+// 3. Prompt the user to enter an integer and output all the days of the week that
+//have no more letters than the integer given.
 
-                System.out.println("Continue? [y/n] ");
-                input = scanner.next();
+// 4. Prompt the user to enter their name. Output whether the name is
+// - short (less than 4 characters), medium (less than 9), long (more than 8)
+// - contains the letter 'y'
+// - is a palindrome
 
-            } while(input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes"));
+// 5. Print out all times from 1:00am to 12:00pm.
+//      Example:
+//      1:00am
+//      1:01am
+//      1:02am
+//      etc.
+//  this will help you for this bonus...
+//  https://stackoverflow.com/questions/12421444/how-to-format-a-number-0-9-to-display-with-2-digits-its-not-a-date
+        
     }
 }
