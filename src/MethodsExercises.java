@@ -63,7 +63,6 @@ public class MethodsExercises {
 
         Random random = new Random();
 
-
         do {
             int die = (int)(Math.random() * sidesOfDice +1);
             int dieTwo = (int)(Math.random() * sidesOfDice +1);

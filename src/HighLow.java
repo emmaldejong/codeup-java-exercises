@@ -10,7 +10,6 @@ public class HighLow {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         int randomNumber = random.nextInt(10) + 1;
-
         String guessAgain;
 
         do {
