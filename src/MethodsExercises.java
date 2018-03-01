@@ -38,22 +38,18 @@ public class MethodsExercises {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter an integer between one & ten: ");
         int userInput = scanner.nextInt();
-        int result = 1;
-        String userChoice = "";
-        do {
-            if (userInput >= one && userInput <= ten) {
-                for (int i = 1; i <= userInput; i++) {
-                    result = result * i;
-                    System.out.println(userInput);
-                }
-            } else {
-                return calculateFactorial(one, ten);
+        String userChoice = userInput + "! = ";
+        userChoice += userInput;
+        if (userInput >= one && userInput <= ten) {
+            for (int i = userInput -1; i >= 1; i--) {
+                long total = userInput * i;
+                userChoice += " x " + i;
+                userInput *= i;
+                System.out.println(userChoice + " = " + total);
             }
-
-            System.out.print("Continue? [y/n]");
-            userChoice = scanner.next();
-
-        } while (userChoice.toLowerCase().startsWith("y"));
+        } else {
+            return calculateFactorial(one, ten);
+        }
         return userInput;
     }
 
