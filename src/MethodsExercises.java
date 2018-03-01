@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class MethodsExercises {
 
@@ -33,25 +34,44 @@ public class MethodsExercises {
 //        }
 //    }
 
-    // 3: Calculate the factorial of a number.
-    public static int calculateFactorial(int one, int ten) {
+// 3: Calculate the factorial of a number.
+//    public static int calculateFactorial(int one, int ten) {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter an integer between one & ten: ");
+//        int userInput = scanner.nextInt();
+//        String userChoice = userInput + "! = ";
+//        userChoice += userInput;
+//        if (userInput >= one && userInput <= ten) {
+//            for (int i = userInput -1; i >= 1; i--) {
+//                long total = userInput * i;
+//                userChoice += " x " + i;
+//                userInput *= i;
+//                System.out.println(userChoice + " = " + total);
+//            }
+//        } else {
+//            return calculateFactorial(one, ten);
+//        }
+//        return userInput;
+//    }
+
+// 4: Create an application that simulates dice rolling.
+    public static int rollDice(int one) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter an integer between one & ten: ");
-        int userInput = scanner.nextInt();
-        String userChoice = userInput + "! = ";
-        userChoice += userInput;
-        if (userInput >= one && userInput <= ten) {
-            for (int i = userInput -1; i >= 1; i--) {
-                long total = userInput * i;
-                userChoice += " x " + i;
-                userInput *= i;
-                System.out.println(userChoice + " = " + total);
-            }
-        } else {
-            return calculateFactorial(one, ten);
-        }
-        return userInput;
+        System.out.print("How many sides does your dice have?");
+        int sidesOfDice = scanner.nextInt();
+        String input;
+
+        Random random = new Random();
+        int die = (int)(Math.random() * sidesOfDice +1);
+
+        do {
+            System.out.println("You have rolled a " + die + " and a " + die);
+            System.out.println("Continue? [y/n] ");
+                input = scanner.next();
+        } while (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes"));
+        return sidesOfDice;
     }
+
 
     public static void main(String[] args) {
 // 1: TESTING EXERCISE #1
@@ -65,7 +85,11 @@ public class MethodsExercises {
 //        System.out.println(getInteger(1, 10));
 
 // 3: TESTING EXERCISE #3
-        System.out.println(calculateFactorial(1, 10));
+//        System.out.println(calculateFactorial(1, 10));
+
+// 4: TESTING EXERCISE #4
+        System.out.println(rollDice(1));
+
     }
 
 }
