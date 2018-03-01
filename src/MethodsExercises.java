@@ -62,10 +62,12 @@ public class MethodsExercises {
         String input;
 
         Random random = new Random();
-        int die = (int)(Math.random() * sidesOfDice +1);
+
 
         do {
-            System.out.println("You have rolled a " + die + " and a " + die);
+            int die = (int)(Math.random() * sidesOfDice +1);
+            int dieTwo = (int)(Math.random() * sidesOfDice +1);
+            System.out.println("You have rolled a " + die + " and a " + dieTwo);
             System.out.println("Continue? [y/n] ");
                 input = scanner.next();
         } while (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes"));
