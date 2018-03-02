@@ -1,4 +1,6 @@
 public class RestaurantDish {
+
+//  instance fields(properties and methods)
     public int costInCents;
     public String nameOfDish;
     public boolean wouldRecommend;
@@ -6,5 +8,6 @@ public class RestaurantDish {
     public String eat () {
         return "Nom nom nom";
 
+//  static
     }
 }
