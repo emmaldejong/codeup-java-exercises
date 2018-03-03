@@ -11,14 +11,19 @@ public class Circle {
         numberOfCircles++;
     }
 
-    public double getArea(double radius) {
+// ###### METHODS
+    public double getArea() {
         return Math.PI * (radius * radius);
     }
-    public double getCircumference(double radius) {
+    public double getCircumference() {
         return 2 * Math.PI * radius;
     }
 
     public static int getNumberOfCircles () {
         return numberOfCircles;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
     }
 }
