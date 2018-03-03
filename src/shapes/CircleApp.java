@@ -7,10 +7,12 @@ public class CircleApp {
         System.out.println("Here's how many circles you have right now: ");
         System.out.println(Circle.getNumberOfCircles());
 
-        Circle circle =  new Circle(6);
+
         Input input = new Input();
 
         do {
+            Circle circle =  new Circle(6);
+
             double cir1 = input.getDouble("Enter the radius of your circle:");
             circle.setRadius(cir1);
 
@@ -19,6 +21,8 @@ public class CircleApp {
 
             double circumference = circle.getCircumference();
             System.out.println("The circumference of your circle is " + circumference);
+
+            System.out.println("Here's how many circles you have now: " + circle.getNumberOfCircles());
 
         } while (input.yesNo("Do you want to enter another radius?"));
 
@@ -42,10 +46,6 @@ public class CircleApp {
 //            double circumference2 = circle.getCircumference();
 //            System.out.println("The circumference of this circle is:" + circumference2);
 //        }
-
-// ########### RYAN'S CODE TO COUNT CIRCLES
-
-        System.out.println("Here's how many circles you have now: " + circle.getNumberOfCircles());
 
     }
 }
