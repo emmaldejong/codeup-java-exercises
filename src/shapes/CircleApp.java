@@ -7,24 +7,25 @@ public class CircleApp {
         System.out.println("Here's how many circles you have right now: ");
         System.out.println(Circle.getNumberOfCircles());
 
+        enterCircles();
 
-        Input input = new Input();
+//        Input input = new Input();
 
-        do {
-            Circle circle =  new Circle(6);
-
-            double cir1 = input.getDouble("Enter the radius of your circle:");
-            circle.setRadius(cir1);
-
-            double area = circle.getArea();
-            System.out.println("The area of your circle is " + area);
-
-            double circumference = circle.getCircumference();
-            System.out.println("The circumference of your circle is " + circumference);
-
-            System.out.println("Here's how many circles you have now: " + circle.getNumberOfCircles());
-
-        } while (input.yesNo("Do you want to enter another radius?"));
+//        do {
+//            Circle circle =  new Circle(6);
+//
+//            double cir1 = input.getDouble("Enter the radius of your circle:");
+//            circle.setRadius(cir1);
+//
+//            double area = circle.getArea();
+//            System.out.println("The area of your circle is " + area);
+//
+//            double circumference = circle.getCircumference();
+//            System.out.println("The circumference of your circle is " + circumference);
+//
+//            System.out.println("Here's how many circles you have now: " + circle.getNumberOfCircles());
+//
+//        } while (input.yesNo("Do you want to enter another radius?"));
 
 //        double cir1 = input.getDouble("Enter the radius of your circle:");
 //        circle.setRadius(cir1);
@@ -47,5 +48,26 @@ public class CircleApp {
 //            System.out.println("The circumference of this circle is:" + circumference2);
 //        }
 
+    }
+
+    public static int enterCircles() {
+        Input input = new Input();
+        Circle circle =  new Circle(6);
+        do {
+
+            double cir1 = input.getDouble("Enter the radius of your circle:");
+            circle.setRadius(cir1);
+
+            double area = circle.getArea();
+            System.out.println("The area of your circle is " + area);
+
+            double circumference = circle.getCircumference();
+            System.out.println("The circumference of your circle is " + circumference);
+
+//            System.out.println("Here's how many circles you have now: " + circle.getNumberOfCircles());
+
+        } while (input.yesNo("Do you want to enter another radius?"));
+//        return circle.getNumberOfCircles();
+        return System.out.println(circle.getNumberOfCircles());
     }
 }
