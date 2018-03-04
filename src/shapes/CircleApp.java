@@ -67,7 +67,9 @@ public class CircleApp {
 //            System.out.println("Here's how many circles you have now: " + circle.getNumberOfCircles());
 
         } while (input.yesNo("Do you want to enter another radius?"));
-//        return circle.getNumberOfCircles();
-        return System.out.println(circle.getNumberOfCircles());
+        {
+            System.out.println("Here's how many circles you have " + circle.getNumberOfCircles());
+        }
+        return 0;
     }
 }
