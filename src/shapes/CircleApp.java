@@ -4,10 +4,10 @@ import util.Input;
 
 public class CircleApp {
     public static void main(String[] args) {
-        System.out.println("Here's how many circles you have right now: ");
-        System.out.println(Circle.getNumberOfCircles());
+        System.out.println("Here's how many circles you have right now: " + Circle.getNumberOfCircles());
 
-        enterCircles();
+        int countCircles = 0;
+
 
 //        Input input = new Input();
 
@@ -48,12 +48,14 @@ public class CircleApp {
 //            System.out.println("The circumference of this circle is:" + circumference2);
 //        }
 
-    }
 
-    public static int enterCircles() {
         Input input = new Input();
-        Circle circle =  new Circle(6);
+
+
         do {
+
+            Circle circle = new Circle(6);
+            countCircles++;
 
             double cir1 = input.getDouble("Enter the radius of your circle:");
             circle.setRadius(cir1);
@@ -64,12 +66,9 @@ public class CircleApp {
             double circumference = circle.getCircumference();
             System.out.println("The circumference of your circle is " + circumference);
 
-//            System.out.println("Here's how many circles you have now: " + circle.getNumberOfCircles());
-
         } while (input.yesNo("Do you want to enter another radius?"));
         {
-            System.out.println("Here's how many circles you have " + circle.getNumberOfCircles());
+            System.out.println("You created " + countCircles + " circles!");
         }
-        return 0;
     }
 }
