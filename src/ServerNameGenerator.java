@@ -1,4 +1,3 @@
-
 public class ServerNameGenerator {
 
     public static void main(String[] args) {
@@ -25,5 +24,14 @@ public class ServerNameGenerator {
         adjectives[7] = "dangerous";
         adjectives[8] = "evil";
         adjectives[9] = "stormy";
+
+        System.out.print(getRandom(adjectives));
+        System.out.print("-");
+        System.out.print(getRandom(nouns));
     }
+    public static String getRandom(String[] names) {
+        int random = (int) (Math.random() * names.length);
+        return names[random];
+    }
+
 }
