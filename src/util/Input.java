@@ -16,11 +16,11 @@ public class Input {
     }
 
 //    this was my original code that is hard to reuse throughout an application because I'm specifying that the argument has to be a string
-//    public String getString(String prompt) {
-//        System.out.println(prompt);
-//        String userInput = scan.nextLine();
-//        return userInput;
-//    }
+    public String getString(String prompt) {
+        System.out.println(prompt);
+        String userInput = scan.nextLine();
+        return userInput;
+    }
 
 //############### refactored ryan's code to separate the yesNo() method and overload it, this helps to reuse the first yesNo method to other functions that might need to ask a boolean yesNo question
     public boolean yesNo() {
