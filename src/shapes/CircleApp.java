@@ -8,7 +8,6 @@ public class CircleApp {
 
         int countCircles = 0;
 
-
 //        Input input = new Input();
 
 //        do {
@@ -48,9 +47,7 @@ public class CircleApp {
 //            System.out.println("The circumference of this circle is:" + circumference2);
 //        }
 
-
         Input input = new Input();
-
 
         do {
 
