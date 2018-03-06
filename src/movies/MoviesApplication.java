@@ -12,14 +12,16 @@ public class MoviesApplication {
         Input input = new Input();
 
         do {
-            int userInput = input.getInt(0, 6, "What would you like to do?\n" +
+            int userInput = input.getInt(1, 8, "What would you like to do?\n" +
 //                    "0 - exit\n" +
                     "1 - view all movies\n" +
                     "2 - view movies in the animated category\n" +
                     "3 - view movies in the drama category\n" +
                     "4 - view movies in the horror category\n" +
                     "5 - view movies in the scifi category\n" +
-                    "6 - add a new movie\n" +
+                    "6 - view movies in the comedy category\n" +
+                    "7 - view movies in the musical category\n" +
+                    "8 - add a new movie\n" +
                     "Enter your choice: ");
 
             displaySelection(userInput);
@@ -75,6 +77,12 @@ public class MoviesApplication {
                 viewByCategory("scifi");
                 break;
             case 6:
+                viewByCategory("comedy");
+                break;
+            case 7:
+                viewByCategory("musical");
+                break;
+            case 8:
                 addMovie();
                 break;
             default:
