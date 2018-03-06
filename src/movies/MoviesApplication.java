@@ -12,8 +12,8 @@ public class MoviesApplication {
         Input input = new Input();
 
         do {
-            int userInput = input.getInt(1, 8, "What would you like to do?\n" +
-//                    "0 - exit\n" +
+            int userInput = input.getInt(0, 8, "What would you like to do?\n" +
+                    "0 - exit application\n" +
                     "1 - view all movies\n" +
                     "2 - view movies in the animated category\n" +
                     "3 - view movies in the drama category\n" +
@@ -62,6 +62,9 @@ public class MoviesApplication {
     public static void displaySelection(int userInput) {
 
         switch (userInput) {
+            case 0:
+                System.exit(0);
+                return;
             case 1:
                 viewAllMovies();
                 break;
@@ -87,13 +90,14 @@ public class MoviesApplication {
                 addMovie();
                 break;
             default:
-                System.out.println("Goodbye!");
+                System.out.println("ERROR!");
                 break;
         }
     }
 }
 
-
+//Thought Process: separate the logic of the application from handling the user input, when you first begin
+                    // to help break down the functionality of the application
 
 
 
