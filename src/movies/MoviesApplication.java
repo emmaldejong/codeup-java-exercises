@@ -22,13 +22,14 @@ public class MoviesApplication {
                     "6 - view movies in the comedy category\n" +
                     "7 - view movies in the musical category\n" +
                     "8 - add a new movie\n" +
+                    "===========================================\n" +
                     "Enter your choice: ");
 
             displaySelection(userInput);
 
             System.out.println("===========================================================");
 
-        } while (input.yesNo("Would you like to make another selection or add a movie?"));
+        } while (input.yesNo("Would you like to make another selection or add a movie? [Y/N]"));
 
         System.out.println("Goodbye!");
     }
@@ -49,8 +50,8 @@ public class MoviesApplication {
 
     public static void addMovie() {
         Input input = new Input();
-        String newMovieName = input.getString("Enter the new movie's name:");
-        String newMovieCategory = input.getString("Enter the new movie's category:");
+        String newMovieName = input.getString("Step #1 - Enter the new movie's name:");
+        String newMovieCategory = input.getString("Step #2 - Enter the new movie's category:");
         Movie userNewMovie = new Movie(newMovieName, newMovieCategory);
         Movie[] moviesArray = Arrays.copyOf(viewAll, viewAll.length + 1);
         int lastIndex = moviesArray.length - 1;
