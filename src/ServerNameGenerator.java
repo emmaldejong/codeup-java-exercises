@@ -33,5 +33,6 @@ public class ServerNameGenerator {
         int random = (int) (Math.random() * names.length);
         return names[random];
     }
-
 }
+
+//BONUS: refactor to use the Random object that already in Java and refactor to have a cleaner main method
