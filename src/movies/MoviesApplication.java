@@ -2,7 +2,6 @@ package movies;
 
 import util.Input;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MoviesApplication {
@@ -30,12 +29,6 @@ public class MoviesApplication {
         } while (input.yesNo("Would you like to make another selection or add a movie?"));
 
         System.out.println("Goodbye!");
-
-//        String[] thisIsAStringArray = {"Car", "Van", "Bike"};
-//        MoviesArray = add(MoviesArray, "SUV");
-//        for (String element:MoviesArray) {
-//            System.out.println( element );
-//        }
     }
 
     public static void viewAllMovies() {
@@ -51,13 +44,14 @@ public class MoviesApplication {
             }
         }
     }
+
     public static void addMovie() {
         Input input = new Input();
         String newMovieName = input.getString("Enter the new movie's name:");
         String newMovieCategory = input.getString("Enter the new movie's category:");
         Movie userNewMovie = new Movie(newMovieName, newMovieCategory);
         Movie[] moviesArray = Arrays.copyOf(viewAll, viewAll.length + 1);
-        int lastIndex = moviesArray.length -1;
+        int lastIndex = moviesArray.length - 1;
         moviesArray[lastIndex] = userNewMovie;
         viewAll = moviesArray;
     }
@@ -88,8 +82,6 @@ public class MoviesApplication {
                 break;
         }
     }
-
-
 }
 
 
