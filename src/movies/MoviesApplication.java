@@ -56,9 +56,10 @@ public class MoviesApplication {
         String newMovieName = input.getString("Enter the new movie's name:");
         String newMovieCategory = input.getString("Enter the new movie's category:");
         Movie userNewMovie = new Movie(newMovieName, newMovieCategory);
-//        Movie[] moviesArray = Arrays.copyOf(viewAll, viewAll.length + 1);
-        ArrayList<Movie> moviesArray = new ArrayList<>();
-        moviesArray.add(userNewMovie);
+        Movie[] moviesArray = Arrays.copyOf(viewAll, viewAll.length + 1);
+        int lastIndex = moviesArray.length -1;
+        moviesArray[lastIndex] = userNewMovie;
+        viewAll = moviesArray;
     }
 
     public static void displaySelection(int userInput) {
