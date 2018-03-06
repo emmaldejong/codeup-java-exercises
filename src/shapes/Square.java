@@ -4,11 +4,9 @@ public class Square extends Rectangle{
     protected int side;
 
     public Square(int side) {
-        super(side, side);
+        super(side, side); //super(side, side) is referring to the constructor on the Rectangle object b/c the Rectangle constructor has 2 parameters as well.
         this.side = side;
     }
-
-    //super(side, side) is referring to the constructor on the Rectangle object b/c the Rectangle constructor has 2 parameters as well.
 
     @Override
     public double getArea() {
