@@ -56,6 +56,7 @@ public class Input {
     public int getInt(int min, int max) {
         int intInput = getInt();
         if(intInput < min || intInput > max) {
+            System.out.println("The number you have selected is outside the range of options! Please make another selection.");
             return getInt(min, max);
         } else {
             return intInput;
