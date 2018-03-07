@@ -21,3 +21,9 @@ abstract class Quadrilateral extends Shape implements Measurable {
 
     public abstract void setWidth(double width);
 }
+
+
+//this type of shape extends the Shape Class and implements the two getArea and getPerimeter methods in the Measurable interface
+//this sets the protected properties and the constructor and the getters for it's subclasses of Rectangle and Shape
+
+//it also has 2 abstract methods for length and width setters
