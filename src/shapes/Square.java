@@ -1,9 +1,9 @@
 package shapes;
 
-public class Square extends Rectangle{
-    protected int side;
+public class Square extends Quadrilateral implements Measurable{
+    protected double  side;
 
-    public Square(int side) {
+    public Square(double side) {
         super(side, side); //super(side, side) is referring to the constructor on the Rectangle object b/c the Rectangle constructor has 2 parameters as well.
         this.side = side;
     }
@@ -20,5 +20,17 @@ public class Square extends Rectangle{
     @Override
     public double getPerimeter() {
         return 4 * side;
+    }
+
+    @Override
+    public void setLength(double side) {
+        setWidth(side);
+    }
+
+    @Override
+    public void setWidth(double side) {
+        width = side;
+        length = side;
+        this.side = side;
     }
 }
