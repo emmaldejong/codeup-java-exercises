@@ -8,10 +8,14 @@ public class Square extends Rectangle{
         this.side = side;
     }
 
+    //the super keyword calls the immediate parent constructor
+
     @Override
     public double getArea() {
         return side * side;
     }
+
+    //length * length or width * width instead of creating the new "unnecessary" side property added to the square class
 
     @Override
     public double getPerimeter() {
