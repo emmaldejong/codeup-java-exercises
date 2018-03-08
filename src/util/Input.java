@@ -18,7 +18,7 @@ public class Input {
 //    this was my original code that is hard to reuse throughout an application because I'm specifying that the argument has to be a string
     public String getString(String prompt) {
         System.out.println(prompt);
-        String userInput = scan.nextLine();
+        String userInput = scan.next();
         return userInput;
     }
 
