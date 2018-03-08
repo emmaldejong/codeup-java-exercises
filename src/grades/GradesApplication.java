@@ -5,8 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class GradesApplication {
+    public static Input input = new Input();
+
     public static void main(String[] args) {
-        Input input = new Input();
         HashMap<String, Student> students = new HashMap<>();
 
         Student ryan = new Student("Ryan");
@@ -55,7 +56,7 @@ public class GradesApplication {
                         "Average Grade: " + students.get(usernameInput).getGradeAverage() + "\n" +
                         "All Current Grades: " + students.get(usernameInput).getGrades());
             } else {
-                System.out.println("Sorry, no student found with the GitHub username of \"" + usernameInput + "\".");
+                System.out.println("ERROR 404 - Student not found with the GitHub username of \"" + usernameInput + "\".");
             }
 
             System.out.println("============================================");
@@ -70,7 +71,9 @@ public class GradesApplication {
     public static void viewAllGrades(HashMap<String, Student> students) {
         for(String student : students.keySet()) {
             Student current = students.get(student);
-            System.out.println(current.getStudentName());
+            System.out.println("Name: " + current.getStudentName() +"\n" +
+                    "Average Grade: " + current.getGradeAverage() + "\n" +
+                    "All Current Grades:" + current.getGrades());
         }
     }
 }
