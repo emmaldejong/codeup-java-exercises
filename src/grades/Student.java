@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class Student {
     private String studentName;
+
+
     private ArrayList<Integer> grades;
 
     //CONSTRUCTOR
@@ -17,6 +19,9 @@ public class Student {
         return studentName;
     }
 
+    public ArrayList<Integer> getGrades() {
+        return grades;
+    }
     //ADDS THE GIVEN GRADE TO THE GRADES PROPERTY
     public void addGrade(int grade){
         grades.add(grade);

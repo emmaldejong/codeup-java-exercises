@@ -2,6 +2,7 @@ package grades;
 
 import util.Input;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class GradesApplication {
@@ -36,17 +37,24 @@ public class GradesApplication {
 
         System.out.println("Welcome!");
         System.out.println("============================================");
-        System.out.println("Here are the github usernames of our students: \n" +
-                students.keySet()
-        );
-        System.out.println("============================================");
+
+        System.out.println("Here are the github usernames of our students: ");
+
+        for(String student : students.keySet()) {
+            System.out.println("|" + student + "|");
+        }
 
         boolean willContinue;
+
         do {
+            System.out.println("============================================");
             String usernameInput = input.getString("What student would you like to see more information on?");
 
             if(students.containsKey(usernameInput)) {
-                System.out.println(students.get(usernameInput).getStudentName() + " has the average grade of " + students.get(usernameInput).getGradeAverage());
+                System.out.println("Name: " + students.get(usernameInput).getStudentName() + "\n" +
+                        "Github Username: " + usernameInput + "\n" +
+                        "Average Grade: " + students.get(usernameInput).getGradeAverage() + "\n" +
+                        "All Current Grades: " + students.get(usernameInput).getGrades());
             } else {
                 System.out.println("Sorry, no student found with the GitHub username of \"" + usernameInput + "\".");
             }
@@ -59,4 +67,11 @@ public class GradesApplication {
 
         System.out.println("Goodbye!");
     }
+
+//    public static void viewGrades() {
+//        ArrayList<Integer> allGrades = new ArrayList<>();
+//        for(Student student : students.grades) {
+//            System.out.println(allGrades);
+//        }
+//    }
 }
