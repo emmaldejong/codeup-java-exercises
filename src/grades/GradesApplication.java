@@ -75,4 +75,4 @@ public class GradesApplication {
     }
 }
 
-//refactor the program so that on initial output, it asks the user to if they want to [0] exit the program [1]view individual grades [2] view classroom report [3] view classroom average
+//refactor the program so that on initial output, it asks the user to if they want to [0] exit the program [1]view individual grades [2] view classroom report [3] view classroom average [4] add student to classroom
