@@ -29,7 +29,6 @@ public class Student {
         for(int grade : grades) {
             sumOfAllGrades += grade;
         }
-
         double average = sumOfAllGrades / grades.size();
         return average;
     }
