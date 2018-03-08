@@ -1,9 +1,8 @@
 package grades;
 
 import util.Input;
-
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class GradesApplication {
     public static void main(String[] args) {
@@ -68,10 +67,12 @@ public class GradesApplication {
         System.out.println("Goodbye!");
     }
 
-//    public static void viewGrades() {
-//        ArrayList<Integer> allGrades = new ArrayList<>();
-//        for(Student student : students.grades) {
-//            System.out.println(allGrades);
-//        }
-//    }
+    public static void viewAllGrades(HashMap<String, Student> students) {
+        for(String student : students.keySet()) {
+            Student current = students.get(student);
+            System.out.println(current.getStudentName());
+        }
+    }
 }
+
+//refactor the program so that on initial output, it asks the user to if they want to [0] exit the program [1]view individual grades [2] view classroom report [3] view classroom average
