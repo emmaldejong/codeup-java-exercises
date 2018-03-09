@@ -41,7 +41,7 @@ public class InputTest {
 
 //        System.out.println(input.getIntWithinRange("Enter another number...", 0, 20));
 
-//        System.out.println(input.getDouble("Enter a decimal number..."));
+        System.out.println(input.getDouble("Enter a decimal number..."));
 
 //        System.out.println(input.getDouble(0, 6, "Enter a decimal number between 0 & 6..."));
 

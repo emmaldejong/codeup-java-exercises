@@ -96,7 +96,7 @@ public class Input {
             return Double.valueOf(input);
         } catch (NumberFormatException e) {
             System.out.println("ERROR - Please enter an double");
-            return getInt(prompt);
+            return getDouble(prompt);
         }
     }
 
