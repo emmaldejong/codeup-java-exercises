@@ -93,8 +93,8 @@ public class FileHelper {
         data.add("goodbye");
 
 //        slurp("src/testfileio.txt");
-//        spit("test_fileIO.txt", data, true);
+        spit("src/test_fileIO.txt", data, true);
 
-        makeExciting("test_fileio.txt");
+//        makeExciting("test_fileio.txt");
     }
 }
