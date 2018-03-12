@@ -76,6 +76,14 @@ public class FileHelper {
     }
 
     public static void makeExciting(String filename) {
+//        List<String> excitedLines = new ArrayList<>();
+//        for(String line : slurp(filename)) {
+//            String excitedLine = line.toUpperCase() + "!";
+//            excitedLines.add(excitedLine);
+//        }
+//        System.out.println(filename);
+//        System.out.println(excitedLines);
+
         List<String> excitingFiles = null;
         try {
             excitingFiles = readAllLines(Paths.get(filename));
