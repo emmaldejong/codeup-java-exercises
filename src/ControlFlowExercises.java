@@ -139,22 +139,22 @@ public class ControlFlowExercises {
 //        } while (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes"));
 
 // 2. Prompt the user for an integer. Output whether or not the number is prime.
-//        Scanner scanner = new Scanner(System.in);
-//        String input;
-//        do {
-//            System.out.println("Enter any integer: ");
-//            int numberInput = scanner.nextInt();
-//
-//            for (int i = 2; i < numberInput; i++) {
-//                if (numberInput % i == 0) {
-//                    System.out.println(numberInput + "is not Prime... :O");
-//                } else {
-//                    System.out.println(numberInput + "is Prime! :D");
-//                }
-//            }
-//            System.out.println("Continue? [y/n");
-//            input = scanner.next();
-//        } while (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes"));
+        Scanner scanner = new Scanner(System.in);
+        String input;
+        do {
+            System.out.println("Enter any integer: ");
+            int numberInput = scanner.nextInt();
+
+            for (int i = 3; i*i < numberInput; i+=2) {
+                if (numberInput % 2 == 0) {
+                    System.out.println(numberInput + "is not Prime... :O");
+                } else {
+                    System.out.println(numberInput + "is Prime! :D");
+                }
+            }
+            System.out.println("Continue? [y/n");
+            input = scanner.next();
+        } while (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes"));
 
 // 3. Prompt the user to enter an integer and output all the days of the week that
 //have no more letters than the integer given.
